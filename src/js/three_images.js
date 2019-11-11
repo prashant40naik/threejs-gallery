@@ -4,7 +4,8 @@ var camera, scene, raycaster, renderer, stats;
 			if (typeof three_images == 'undefined'){
 			getUrl(init);
 			function getUrl(init){
-			jQuery.get('https://www.naikonpixels.com/scripts/threejs/json/three_urls.json?callback?', function(data) {
+			// Add a link to the JSON file containing image URLs
+			jQuery.get('https://three_urls.json?callback?', function(data) {
 			var jsArray = jQuery.parseJSON(data);
 			init(jsArray);
 			animate();});
